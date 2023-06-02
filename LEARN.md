@@ -2,6 +2,8 @@
 
 MindSOS is an open-source platform dedicated to providing accessible resources and support for individuals facing mental health challenges, with a focus on addressing recent premier institution suicides. It aims to create a safe space and a supportive community where people can seek help, share experiences, and find the support they need.
 
+PLEASE CONTRIBUTE TO MAKE THIS PROJECT REAL.
+
 ## Vision
 
 Our vision is to build a comprehensive platform that empowers individuals to prioritize their mental well-being and provides them with the necessary tools and resources to navigate through difficult times. We strive to foster a compassionate and understanding community that promotes mental health awareness and offers support to those in need.
