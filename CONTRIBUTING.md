@@ -14,7 +14,7 @@ We welcome contributions to enhance and improve MindSOS! If you would like to co
 
 ## Coding Conventions
 
-- write simple comments to understand easily 
+- write simple comments to understand easily code
 - Write clear and concise commit messages.
 - Include tests for your changes and ensure that existing tests pass.
 - Document any new features or changes in the README.md file.
