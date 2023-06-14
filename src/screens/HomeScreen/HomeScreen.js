@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export default function homenav() {
+
+export default function Homenav() {
   const navigation = useNavigation();
 
   const handlePressBot = () => {
@@ -14,7 +15,7 @@ export default function homenav() {
   };
 
   const handlePressComm = () => {
-    console.log("Community Support");
+    navigation.navigate('ChatScreen');
   };
 
   const handlePressReso = () => {
@@ -32,7 +33,7 @@ export default function homenav() {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.touchable} onPress={handlePressComm}>
-        <Text style={styles.text}>Community Support</Text>
+        <Text style={styles.text}>1:1 Peer Support</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.touchable} onPress={handlePressReso}>

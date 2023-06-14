@@ -6,6 +6,7 @@ import ListDoctor from './src/screens/ListDoctor/ListDoctor';
 import SingleDoctor from './src/screens/SingleDoctor/SingleDoctor';
 import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Bot from './src/screens/Bot/Bot';
+import ChatScreen from './src/screens/ChatScreen/ChatScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="Bot" component={Bot}/>
         <Stack.Screen name="ListDoctor" component={ListDoctor} />
         <Stack.Screen name="SingleDoctor" component={SingleDoctor} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

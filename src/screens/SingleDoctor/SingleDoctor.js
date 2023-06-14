@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, Button } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 
 const SingleDoctor = () => {
   const route = useRoute();
   const { doctor } = route.params;
+  const clicked = () => {
+    console.log("Clicked")
+  }
 
   return (
     <View style={styles.container}>
@@ -12,6 +15,7 @@ const SingleDoctor = () => {
       <Text style={styles.qualifications}>{doctor.qualifications}</Text>
       <Text style={styles.description}>{doctor.description}</Text>
       <Image source={doctor.photo} style={styles.photo} />
+      <Button onPress={clicked} title="Book Now"/>
     </View>
   );
 };
