@@ -8,7 +8,10 @@ import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Bot from './src/screens/Bot/Bot';
 import ChatScreen from './src/screens/ChatScreen/ChatScreen';
 
+
 const Stack = createStackNavigator();
+
+
 
 export default function App() {
   return (
