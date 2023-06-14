@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
-import SingleDoctor from '../screens/Doctor/SingleDoctor';
+import SingleDoctor from '../screens/SingleDoctor/SingleDoctor';
 import doctors from '../components/DoctorsData';
 import { useNavigation } from '@react-navigation/native';
+
+
 
 const DoctorList = () => {
   const navigation = useNavigation();

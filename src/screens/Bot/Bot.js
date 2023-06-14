@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-nativ
 import axios from 'axios';
 import { SafeAreaView } from 'react-native';
 
-const demo = () => {
+const Bot = () => {
     const [text, onChangeText] = React.useState('');
 
 
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default demo;
+export default Bot;
