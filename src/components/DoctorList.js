@@ -1,33 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, Tit } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import SingleDoctor from '../screens/Doctor/SingleDoctor';
+import doctors from '../components/DoctorsData';
+import { useNavigation } from '@react-navigation/native';
 
 const DoctorList = () => {
-  const doctors = [
-    {
-      id: 1,
-      name: 'Dr. Raghav',
-      qualifications: 'MBBS, MD',
-      description: 'Done 12 surgeries, graduated from Harvard Medical School',
-      photo: require('//'),
-    },
-    {
-      id: 2,
-      name: 'Dr. Meghna',
-      qualifications: 'MBBS, MPhil',
-      description: 'Master in heart surgery from Columbia',
-      photo: require('../assets/fdoctor.jpeg'),
-    },
-  ];
+  const navigation = useNavigation();
+
+  const handleDoctorPress = (doctor) => {
+    navigation.navigate('SingleDoctor', { doctor });
+  };
 
   return (
     <View style={styles.container}>
       {doctors.map((doctor) => (
-        <View key={doctor.id} style={styles.card}>
-          <Image source={doctor.photo} style={styles.photo} />
+        <TouchableOpacity key={doctor.id} style={styles.card} onPress={() => handleDoctorPress(doctor)}>
           <Text style={styles.name}>{doctor.name}</Text>
           <Text style={styles.qualifications}>{doctor.qualifications}</Text>
           <Text style={styles.description}>{doctor.description}</Text>
-        </View>
+          <Image source={doctor.photo} style={styles.photo} />
+        </TouchableOpacity>
       ))}
     </View>
   );
@@ -37,12 +29,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    borderColor: 'black',
+    borderWidth: 3,
   },
   card: {
     marginBottom: 16,
     backgroundColor: 'white',
     padding: 16,
     borderRadius: 8,
+    borderColor: 'black',
+    borderWidth: 3,
   },
   photo: {
     width: 100,
@@ -65,5 +61,3 @@ const styles = StyleSheet.create({
 });
 
 export default DoctorList;
-
-

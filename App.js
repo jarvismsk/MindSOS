@@ -1,25 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Linking } from 'react-native';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen/HomeScreen'
-import Bot from './screens/Bot/Bot';
+import ListDoctor from './src/screens/Doctor/ListDoctor';
+import SingleDoctor from './src/screens/Doctor/SingleDoctor';
 
-export default function dj() {
+const Stack = createStackNavigator();
+
+export default function App() {
   return (
-    <View style={styles.container}>
-        
-        <Bot />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="DoctorList" component={ListDoctor} />
+        <Stack.Screen name="SingleDoctor" component={SingleDoctor} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
