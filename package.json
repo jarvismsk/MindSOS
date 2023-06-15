@@ -19,6 +19,9 @@
     "react-native": "0.71.8",
     "react-native-chatgpt": "^0.9.0",
     "react-native-web": "~0.18.10",
+    "react-redux": "^8.1.0",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
     "sendbird": "^3.1.32"
   },
   "devDependencies": {
