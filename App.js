@@ -11,6 +11,8 @@ import SingleDoctor from './src/screens/SingleDoctor/SingleDoctor';
 import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Bot from './src/screens/Bot/Bot';
 import ChatScreen from './src/screens/ChatScreen/ChatScreen';
+import SignupScreen from './src/screens/SignupScreen/SignupScreen';
+import LoginScreen from './src/screens/LoginScreen/LoginScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,11 +27,14 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
+        <Stack.Screen name="SignupScreen" component={SignupScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="Bot" component={Bot} />
           <Stack.Screen name="ListDoctor" component={ListDoctor} />
           <Stack.Screen name="SingleDoctor" component={SingleDoctor} />
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
+          
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
