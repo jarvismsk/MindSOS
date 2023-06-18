@@ -1,20 +1,17 @@
-// Import required modules
 const express = require('express');
+const bodyParser = require('body-parser');
+const authRoutes = require('./routes/authRoutes');
 
-// Create Express app
 const app = express();
-
-// Define middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Define routes
-app.get('/', (req, res) => {
-    res.send('MindSOS server is up and running!');
-  });
-  
-// Start the server
 const port = 3000;
+
+// Middleware
+app.use(bodyParser.json());
+
+// Routes
+app.use(authRoutes);
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
